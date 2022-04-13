@@ -12,13 +12,13 @@ namespace SistemaDP.Models
         public Guid Id { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
-        private DateTime data_mod_salario { get; set; }
+        public DateTime data_mod_salario { get; set; }
 
         [Required(ErrorMessage = "O salário inicial é obrigatório preencher")]
         [Display(Name = "Salário inicial")]
-        private int salario_inicial { get; set; }
+        public int salario_inicial { get; set; }
 
-        private int salario_atual { get; set; }
+        public int salario_atual { get; set; }
 
         public HistoricoSalario()
         {

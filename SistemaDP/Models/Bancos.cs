@@ -11,14 +11,14 @@ namespace SistemaDP.Models
         [Key]
         public Guid Id { get; set; }
 
-        private string numero_banco { get; set; }
+        public string numero_banco { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string descricao_banco { get; set; }
+        public string descricao_banco { get; set; }
 
-        private string agencia_banco { get; set; }
+        public string agencia_banco { get; set; }
 
-        private string  conta_banco { get; set; }
+        public string  conta_banco { get; set; }
 
         public Bancos()
         {

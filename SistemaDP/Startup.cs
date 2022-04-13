@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using SistemaDP.Data;
 
 namespace SistemaDP
 {
@@ -24,6 +26,9 @@ namespace SistemaDP
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<SistemaDPContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("SistemaDPContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

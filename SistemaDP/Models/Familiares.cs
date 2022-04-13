@@ -12,17 +12,17 @@ namespace SistemaDP.Models
         public Guid Id { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string nome_pai { get; set; }
+        public string nome_pai { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string nome_mae { get; set; }
+        public string nome_mae { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string nome_filho { get; set; }
+        public string nome_filho { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
         [Display(Name = "Data de admissão")]
-        private DateTime nasc_filho { get; set; }
+        public DateTime nasc_filho { get; set; }
 
         public Familiares()
         {

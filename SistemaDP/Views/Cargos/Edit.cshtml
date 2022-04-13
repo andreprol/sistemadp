@@ -1,0 +1,49 @@
+﻿@model SistemaDP.Models.Cargos
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Cargos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="abreviacao" class="control-label"></label>
+                <input asp-for="abreviacao" class="form-control" />
+                <span asp-validation-for="abreviacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="descricao" class="control-label"></label>
+                <input asp-for="descricao" class="form-control" />
+                <span asp-validation-for="descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="diasexp" class="control-label"></label>
+                <input asp-for="diasexp" class="form-control" />
+                <span asp-validation-for="diasexp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="diasprorr" class="control-label"></label>
+                <input asp-for="diasprorr" class="form-control" />
+                <span asp-validation-for="diasprorr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

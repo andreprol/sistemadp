@@ -14,10 +14,10 @@ namespace SistemaDP.Models
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
         [Required(ErrorMessage = "A data é obrigatória")]
         [Display(Name = "Data da ocorrência")]
-        private DateTime data { get; set; }
+        public DateTime data { get; set; }
 
         [Required(ErrorMessage = "É necessário descrever o ocorrido")]
-        private string descricao { get; set; }
+        public string descricao { get; set; }
 
         public HistoricoFuncionario()
         {

@@ -14,9 +14,9 @@ namespace SistemaDP.Models
         public int numero_evento { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string descricao_evento { get; set; }
+        public string descricao_evento { get; set; }
 
-        private DateTime data_evento { get; set; }
+        public DateTime data_evento { get; set; }
 
         public Eventos()
         {

@@ -12,18 +12,18 @@ namespace SistemaDP.Models
         public Guid Id { get; set; }
 
 
-        private string cargo_original { get; set; }
+        public string cargo_original { get; set; }
 
-        private string cargo_atual { get; set; }
+        public string cargo_atual { get; set; }
 
-        private int salario_original { get; set; }
+        public int salario_original { get; set; }
 
         [Required(ErrorMessage = "O salário atual é obrigatório")]
-        private int salario_atual { get; set; }
+        public int salario_atual { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
         [Display(Name = "Data de modificação de salário")]
-        private DateTime data_modificao { get; set; }
+        public DateTime data_modificao { get; set; }
 
         public Salarios()
         {

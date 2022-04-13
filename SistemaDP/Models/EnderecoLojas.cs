@@ -14,20 +14,20 @@ namespace SistemaDP.Models
         //utilizar o ajax para preenchimento do CEP
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string rua { get; set; }
+        public string rua { get; set; }
 
-        private int numero { get; set; }
-
-        [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string complemento { get; set; }
+        public int numero { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string bairro { get; set; }
+        public string complemento { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string cidade { get; set; }
+        public string bairro { get; set; }
 
-        private string telefone { get; set; }
+        [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
+        public string cidade { get; set; }
+
+        public string telefone { get; set; }
 
         public EnderecoLojas()
         {
@@ -46,5 +46,5 @@ namespace SistemaDP.Models
         }
     }
 }
-    }
-}
+    
+

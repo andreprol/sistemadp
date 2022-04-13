@@ -14,25 +14,25 @@ namespace SistemaDP.Models
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
         [Required(ErrorMessage = "A data de início é obrigatória")]
         [Display(Name = "Data de início")]
-        private DateTime datainicio { get; set; }
+        public DateTime datainicio { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
         [Required(ErrorMessage = "A data de fim é obrigatória")]
         [Display(Name = "Data de fim")]
-        private DateTime datafim { get; set; }
+        public DateTime datafim { get; set; }
 
-        private DateTime datagozo { get; set; }
+        public DateTime datagozo { get; set; }
 
         [Required(ErrorMessage = "O valor das férias é obrigatório")]
-        private int valorferias { get; set; }
+        public int valorferias { get; set; }
 
-        private int abonoferias { get; set; }
+        public int abonoferias { get; set; }
 
-        private int diasgozo { get; set; }
+        public int diasgozo { get; set; }
 
-        private int diasvendidos { get; set; }
+        public int diasvendidos { get; set; }
 
-        private int valorvendido { get; set; }
+        public int valorvendido { get; set; }
 
         public HistoricoFerias()
         {

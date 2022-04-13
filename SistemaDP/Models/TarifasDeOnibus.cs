@@ -11,13 +11,13 @@ namespace SistemaDP.Models
         [Key]
         public Guid Id { get; set; }
 
-        private int tarifa_original { get; set; }
+        public int tarifa_original { get; set; }
 
         [Required(ErrorMessage = "A tarifa atual é obrigatória")]
-        private int tarifa_atual { get; set; }
+        public int tarifa_atual { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string tipo { get; set; }
+        public string tipo { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
         [Required(ErrorMessage = "A data do afastamento é obrigatória")]

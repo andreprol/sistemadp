@@ -13,7 +13,7 @@ namespace SistemaDP.Models
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
         [Required(ErrorMessage = "A descrição é obrigatória")]
-        private string descricao { get; set; }
+        public string descricao { get; set; }
 
         public Instrucao()
         {

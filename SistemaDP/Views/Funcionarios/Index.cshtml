@@ -1,0 +1,179 @@
+﻿@model IEnumerable<SistemaDP.Models.Funcionario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nome_guerra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.registro_contador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.expedicao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.orgao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.carteira_trabalho)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.serie_ct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.emissao_ct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.afastamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.causa_afastamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.saida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.naturalidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cidade_nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pis_pasep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.banco_pis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.titulo_eleitor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.zona)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.secao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.desconto_sindicato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tamanho_camisa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tamanho_calca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.observacoes)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome_guerra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.registro_contador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.expedicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.carteira_trabalho)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.serie_ct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.emissao_ct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.afastamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.causa_afastamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.saida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.naturalidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cidade_nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pis_pasep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.banco_pis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.titulo_eleitor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.zona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.secao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.desconto_sindicato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tamanho_camisa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tamanho_calca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.observacoes)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

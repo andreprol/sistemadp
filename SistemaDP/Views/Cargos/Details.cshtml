@@ -1,0 +1,42 @@
+﻿@model SistemaDP.Models.Cargos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Cargos</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.abreviacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.abreviacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.diasexp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.diasexp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.diasprorr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.diasprorr)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

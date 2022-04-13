@@ -11,10 +11,10 @@ namespace SistemaDP.Models
         [Key]
         public Guid Id { get; set; }
 
-        private int numero_divisao { get; set; }
+        public int numero_divisao { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string descricao { get; set; }
+        public string descricao { get; set; }
 
         public Divisao()
         {

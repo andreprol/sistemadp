@@ -13,20 +13,20 @@ namespace SistemaDP.Models
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
         [Required(ErrorMessage = "A descrição da instrução é obrigatória")]
-        private string descricao { get; set; }
+        public string descricao { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string sigla { get; set; }
+        public string sigla { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string razao_social { get; set; }
+        public string razao_social { get; set; }
 
-        private string cnpj { get; set; }
+        public string cnpj { get; set; }
 
-        private string inscricao_estadual { get; set; }
+        public string inscricao_estadual { get; set; }
 
         public string cod_amil { get; set; }
 
-        private EnderecoLojas endereco_lojas { get; set; }
+        public EnderecoLojas endereco_lojas { get; set; }
     }
 }

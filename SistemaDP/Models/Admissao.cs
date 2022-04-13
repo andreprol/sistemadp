@@ -12,12 +12,12 @@ namespace SistemaDP.Models
         public Guid Id { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage ="Formato inválido")]
-        private string tipo { get; set; }
+        public string tipo { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage ="Data em formato incorreto")]
         [Required(ErrorMessage ="A data de admissão é obrigatória")]
         [Display(Name ="Data de admissão")]
-        private DateTime data_admissao { get; set; }
+        public DateTime data_admissao { get; set; }
 
         public Admissao()
         {

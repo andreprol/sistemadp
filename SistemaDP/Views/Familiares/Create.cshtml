@@ -1,0 +1,48 @@
+﻿@model SistemaDP.Models.Familiares
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Familiares</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nome_pai" class="control-label"></label>
+                <input asp-for="nome_pai" class="form-control" />
+                <span asp-validation-for="nome_pai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nome_mae" class="control-label"></label>
+                <input asp-for="nome_mae" class="form-control" />
+                <span asp-validation-for="nome_mae" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nome_filho" class="control-label"></label>
+                <input asp-for="nome_filho" class="form-control" />
+                <span asp-validation-for="nome_filho" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nasc_filho" class="control-label"></label>
+                <input asp-for="nasc_filho" class="form-control" />
+                <span asp-validation-for="nasc_filho" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

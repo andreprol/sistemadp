@@ -12,14 +12,14 @@ namespace SistemaDP.Models
         public Guid Id { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string abreviacao { get; set; }
+        public string abreviacao { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
-        private string descricao { get; set; }
+        public string descricao { get; set; }
 
-        private int diasexp { get; set; }
+        public int diasexp { get; set; }
 
-        private int diasprorr { get; set; }
+        public int diasprorr { get; set; }
 
         public Cargos()
         {

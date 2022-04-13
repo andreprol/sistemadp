@@ -12,22 +12,22 @@ namespace SistemaDP.Models
         public Guid Id { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
-        private DateTime data_entrada_abertura { get; set; }
+        public DateTime data_entrada_abertura { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
-        private DateTime data_saida_abertura { get; set; }
+        public DateTime data_saida_abertura { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
-        private DateTime data_entrada_inter { get; set; }
+        public DateTime data_entrada_inter { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
-        private DateTime data_saida_inter { get; set; }
+        public DateTime data_saida_inter { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
-        private DateTime data_entrada_noite { get; set; }
+        public DateTime data_entrada_noite { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
-        private DateTime data_saida_noite { get; set; }
+        public DateTime data_saida_noite { get; set; }
 
         public HorariosOriginais()
         {

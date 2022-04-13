@@ -1,0 +1,68 @@
+﻿@model SistemaDP.Models.HistoricoFerias
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>HistoricoFerias</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="datainicio" class="control-label"></label>
+                <input asp-for="datainicio" class="form-control" />
+                <span asp-validation-for="datainicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="datafim" class="control-label"></label>
+                <input asp-for="datafim" class="form-control" />
+                <span asp-validation-for="datafim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="datagozo" class="control-label"></label>
+                <input asp-for="datagozo" class="form-control" />
+                <span asp-validation-for="datagozo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="valorferias" class="control-label"></label>
+                <input asp-for="valorferias" class="form-control" />
+                <span asp-validation-for="valorferias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="abonoferias" class="control-label"></label>
+                <input asp-for="abonoferias" class="form-control" />
+                <span asp-validation-for="abonoferias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="diasgozo" class="control-label"></label>
+                <input asp-for="diasgozo" class="form-control" />
+                <span asp-validation-for="diasgozo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="diasvendidos" class="control-label"></label>
+                <input asp-for="diasvendidos" class="form-control" />
+                <span asp-validation-for="diasvendidos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="valorvendido" class="control-label"></label>
+                <input asp-for="valorvendido" class="form-control" />
+                <span asp-validation-for="valorvendido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
