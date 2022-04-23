@@ -17,11 +17,12 @@ namespace SistemaDP.Models
         public DateTime data { get; set; }
 
         [Required(ErrorMessage = "É necessário descrever o ocorrido")]
+        [Display(Name = "Descrição da ocorrência")]
         public string descricao { get; set; }
 
         public HistoricoFuncionario()
         {
-
+            Id = Guid.NewGuid();
         }
 
         public HistoricoFuncionario(DateTime data_his, string descricao_ocorrencia)

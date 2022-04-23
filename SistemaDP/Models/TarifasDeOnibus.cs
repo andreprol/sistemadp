@@ -11,22 +11,24 @@ namespace SistemaDP.Models
         [Key]
         public Guid Id { get; set; }
 
+        [Display(Name = "Tarifa original")]
         public int tarifa_original { get; set; }
 
         [Required(ErrorMessage = "A tarifa atual é obrigatória")]
+        [Display(Name = "Tarifa atual")]
         public int tarifa_atual { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
+        [Display(Name = "Tipo da tarifa")]
         public string tipo { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
-        [Required(ErrorMessage = "A data do afastamento é obrigatória")]
-        [Display(Name = "Data do afastamento")]
+        [Display(Name = "Data de modificação da tarifa")]
         public DateTime data_modificacao { get; set; }
 
         public TarifasDeOnibus()
         {
-
+            Id = Guid.NewGuid();
         }
         public TarifasDeOnibus(int original, int atual, string tipo_passagem, DateTime data)
         {

@@ -11,14 +11,17 @@ namespace SistemaDP.Models
         [Key]
         public Guid Id { get; set; }
 
-
+        [Display(Name = "Cargo original - descrição")]
         public string cargo_original { get; set; }
 
+        [Display(Name = "Cargo atual - descição")]
         public string cargo_atual { get; set; }
 
+        [Display(Name = "Salário original")]
         public int salario_original { get; set; }
 
         [Required(ErrorMessage = "O salário atual é obrigatório")]
+        [Display(Name = "Salário atual")]
         public int salario_atual { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
@@ -27,7 +30,7 @@ namespace SistemaDP.Models
 
         public Salarios()
         {
-
+            Id = Guid.NewGuid();
         }
         public Salarios(string c_original, string c_atual,int s_original, int s_atual, DateTime data)
         {

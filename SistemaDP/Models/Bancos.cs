@@ -22,7 +22,7 @@ namespace SistemaDP.Models
 
         public Bancos()
         {
-
+            Id = Guid.NewGuid();
         }
 
         public Bancos(string numero, string descricao, string agencia, string conta)

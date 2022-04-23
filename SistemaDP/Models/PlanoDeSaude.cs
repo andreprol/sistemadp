@@ -13,11 +13,12 @@ namespace SistemaDP.Models
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
         [Required(ErrorMessage = "O nome do plano é obrigatório")]
+        [Display(Name = "Nome do plano")]
         public string plano { get; set; }
 
         public PlanoDeSaude()
         {
-
+            Id = Guid.NewGuid();
         }
         public PlanoDeSaude(string plano_saude)
         {

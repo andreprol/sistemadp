@@ -13,14 +13,16 @@ namespace SistemaDP.Models
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
         [Required(ErrorMessage ="O campo Estado é obrigatório")]
+        [Display(Name = "Estado")]
         public string estado { get; set; }
 
         [Required(ErrorMessage = "O campo Sigla é obrigatório")]
+        [Display(Name = "Sigla do Estado")]
         public string sigla { get; set; }
 
         public UnidadeDeFederacao()
         {
-
+            Id = Guid.NewGuid();
         }
         public UnidadeDeFederacao(string est, string s)
         {

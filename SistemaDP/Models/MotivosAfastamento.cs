@@ -13,6 +13,7 @@ namespace SistemaDP.Models
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
         [Required(ErrorMessage = "A descrição é obrigatória")]
+        [Display(Name = "Motivo do afastamento - descrição")]
         public string descricao { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato incorreto")]
@@ -22,7 +23,7 @@ namespace SistemaDP.Models
 
         public MotivosAfastamento()
         {
-
+            Id = Guid.NewGuid();
         }
         public MotivosAfastamento(string desc, DateTime data)
         {

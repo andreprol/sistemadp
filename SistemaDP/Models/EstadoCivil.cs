@@ -15,7 +15,7 @@ namespace SistemaDP.Models
 
         public EstadoCivil()
         {
-
+            Id = Guid.NewGuid();
         }
 
     }

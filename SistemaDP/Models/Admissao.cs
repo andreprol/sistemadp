@@ -21,7 +21,7 @@ namespace SistemaDP.Models
 
         public Admissao()
         {
-
+            Id = Guid.NewGuid();
         }
 
         public Admissao(string tipo_ad, DateTime data_admissao_ad)

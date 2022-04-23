@@ -12,6 +12,7 @@ namespace SistemaDP.Data
         public SistemaDPContext (DbContextOptions<SistemaDPContext> options)
             : base(options)
         {
+
         }
 
         public DbSet<SistemaDP.Models.Bancos> Bancos { get; set; }

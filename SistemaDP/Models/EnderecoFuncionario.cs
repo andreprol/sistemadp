@@ -14,26 +14,32 @@ namespace SistemaDP.Models
         //utilizar o ajax para preenchimento do CEP
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
+        [Display(Name = "Rua")]
         public string rua { get; set; }
 
+        [Display(Name = "Nº")]
         public int numero { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
+        [Display(Name = "Complemento")]
         public string complemento { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
+        [Display(Name = "Bairro")]
         public string bairro { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\w-]*$", ErrorMessage = "Formato inválido")]
+        [Display(Name = "Cidade")]
         public string cidade { get; set; }
 
         public UnidadeDeFederacao unidade_federacao { get; set; }
 
+        [Display(Name = "Telefone")]
         public string telefone { get; set; }
 
         public EnderecoFuncionario()
         {
-
+            Id = Guid.NewGuid();
         }
 
         public EnderecoFuncionario(string rua_func, int num, string comp, string bairro_func, string cid, UnidadeDeFederacao uf, string tel)

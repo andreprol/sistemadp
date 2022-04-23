@@ -21,22 +21,28 @@ namespace SistemaDP.Models
         [Display(Name = "Data de fim")]
         public DateTime datafim { get; set; }
 
+        [Display(Name = "Data de gozo")]
         public DateTime datagozo { get; set; }
 
         [Required(ErrorMessage = "O valor das férias é obrigatório")]
+        [Display(Name = "Valor das férias")]
         public int valorferias { get; set; }
 
+        [Display(Name = "Valor do abono")]
         public int abonoferias { get; set; }
 
+        [Display(Name = "Qtd dias de gozo")]
         public int diasgozo { get; set; }
 
+        [Display(Name = "Qtd dias vendidos")]
         public int diasvendidos { get; set; }
 
+        [Display(Name = "Valor vendido")]
         public int valorvendido { get; set; }
 
         public HistoricoFerias()
         {
-
+            Id = Guid.NewGuid();
         }
         public HistoricoFerias(DateTime dinicio, DateTime dfim, DateTime dgozo, int valor, int abono, int diasg, int diasv, int valorv)
         {
