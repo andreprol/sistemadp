@@ -4,12 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SistemaDP.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace SistemaDP.Data
 {
-    public class SistemaDPContext : DbContext
+
+    public class SistemaDPContext : IdentityDbContext<IdentityUser>
     {
-        public SistemaDPContext (DbContextOptions<SistemaDPContext> options)
+        public SistemaDPContext(DbContextOptions<SistemaDPContext> options)
             : base(options)
         {
 
@@ -58,5 +61,13 @@ namespace SistemaDP.Data
         public DbSet<SistemaDP.Models.TarifasDeOnibus> TarifasDeOnibus { get; set; }
 
         public DbSet<SistemaDP.Models.UnidadeDeFederacao> UnidadeDeFederacao { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            // Customize the ASP.NET Identity model and override the defaults if needed.
+            // For example, you can rename the ASP.NET Identity table names and more.
+            // Add your customizations after calling base.OnModelCreating(builder);
+        }
     }
 }
